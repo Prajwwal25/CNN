@@ -3,6 +3,46 @@
 ## Overview
 This project implements a deep learning solution for classifying steel surface defects using a Convolutional Neural Network (CNN) architecture. The model is trained on the NEU Metal Surface Defects dataset and can identify various types of defects, including scratches, pits, rolled surfaces, and inclusions. This system is designed to enhance quality control processes in steel manufacturing environments.
 
+### Dataset Statistics
+- **Total Images**: 1,800 grayscale images
+- **Image Format**: Grayscale, BMP format
+- **Image Resolution**: 200 × 200 pixels
+- **Classes**: 6 distinct defect types
+- **Images per Class**: 300 samples per defect type
+- **File Size**: Total size approximately 1.2 GB
+
+### Defect Types
+1. **Rolled-in Scale (RS)**
+   - Appears as dark elongated regions
+   - Caused by rolled-in oxide scale during rolling process
+   - 300 images
+
+2. **Patches (Pa)**
+   - Appears as lighter regions with irregular shapes
+   - Results from uneven surface oxidation
+   - 300 images
+
+3. **Crazing (Cr)**
+   - Network of fine lines or cracks on the surface
+   - Caused by thermal or mechanical stress
+   - 300 images
+
+4. **Pitted Surface (PS)**
+   - Small pits or cavities on the metal surface
+   - Results from localized corrosion or manufacturing defects
+   - 300 images
+
+5. **Inclusion (In)**
+   - Foreign particles embedded in the metal surface
+   - Usually appears as dark spots
+   - 300 images
+
+6. **Scratches (Sc)**
+   - Linear marks or grooves on the surface
+   - Mechanical damage during handling or processing
+   - 300 images
+
+
 ## Features
 * **CNN Architecture**: Robust defect classification capabilities
 * **Advanced Pre-processing**: Image pre-processing with data augmentation for better generalization
@@ -140,3 +180,4 @@ def predict_defect(image_path):
     prediction = model.predict(preprocessed_img)
     return prediction
 ```
+
